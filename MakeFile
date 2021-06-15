@@ -1,0 +1,9 @@
+all: compile link
+
+compile:
+	g++ -I src/include -c Main.cpp Screen.cpp GameSequence.cpp Gun.cpp Logic.cpp Controls.cpp Cellule.cpp
+
+link:
+	g++ Main.o Screen.o GameSequence.o Gun.o Logic.o Controls.o Cellule.o -o main -L src/lib -l sfml-graphics -l sfml-window -l sfml-system -l sfml-audio
+
+	
