@@ -6,20 +6,17 @@ void Logic::render_all() {
 	// clear garbage
 	window.clear(sf::Color(0, 0, 0));
 
-	// special int 64 of SFML
+	
 	circle.setPosition((float)gun.get_x(), (float)gun.get_y());
 
-	//sf::Int64 usec = clock.getElapsedTime().asSeconds();
+	
 
 	if (!paused) {
 		predict_next();
 
 		}
 
-	// if frame interval is not over
-	//else if (usec % generationUpdateInterval != 0) {
-//		ranGeneration = false;
-//		}
+	
 
 	check_events();
 
